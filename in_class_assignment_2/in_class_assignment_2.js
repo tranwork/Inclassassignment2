@@ -64,3 +64,31 @@ let inventory = {
 inventory.addItem("Monitor", 5);
 inventory.addItem("Keyboard", 10);
 console.log(inventory.items);
+
+
+//Task 7
+function findEmployee(employees, name) {
+    return employees.find(employee => employee.name === name);
+}
+let employees = [
+    { name: "Alice", position: "Developer", salary: 70000 },
+    { name: "Bob", position: "Designer", salary: 60000 },
+    { name: "Charlie", position: "Manager", salary: 90000 }
+];
+console.log(findEmployee(employees, "Charlie"));
+
+
+//Task 8
+function mergeOrders(orders1, orders2) {
+    return [...orders1, ...orders2];
+}
+let orders1 = [
+    { id: 1, customer: "Alice" },
+    { id: 2, customer: "Bob" }
+];
+let orders2 = [
+    { id: 3, customer: "Charlie" },
+    { id: 4, customer: "David" }
+];
+console.log(mergeOrders(orders1, orders2));
+
