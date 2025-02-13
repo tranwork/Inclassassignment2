@@ -40,3 +40,27 @@ function updateSalary(employee, percentageIncrease) {
     return employee.salary = employee.salary * percentageIncrease;
 }
 console.log
+
+
+//Task 5
+function findOrder(orders, orderId) {
+    return orders.find(order => order.id === orderId);
+}
+let orders = [
+    { id: 101, customer: "Alice", total: 300 },
+    { id: 102, customer: "Bob", total: 450 },
+    { id: 103, customer: "Charlie", total: 200 }
+];
+console.log(findOrder(orders, 102));
+
+
+//Task 6
+let inventory = {
+    items: [],
+    addItem(name, quantity) {
+        this.items.push({ name, quantity });
+    }
+};
+inventory.addItem("Monitor", 5);
+inventory.addItem("Keyboard", 10);
+console.log(inventory.items);
